@@ -89,7 +89,7 @@ class Clipboard extends Module {
     if (deltaEndsWith(delta, '\n') && delta.ops[delta.ops.length - 1].attributes == null) {
       delta = delta.compose(new Delta().retain(delta.length() - 1).delete(1));
     }
-    debug.log('convert', this.container.innerHTML, delta);
+    debug.log('convert', this.container.innerText, delta);
     this.container.innerHTML = '';
     return delta;
   }
