@@ -9454,6 +9454,7 @@ Toolbar.DEFAULTS = {};
 function addButton(container, format, value) {
   var input = document.createElement('button');
   input.setAttribute('type', 'button');
+  input.setAttribute('tabindex', '-1');
   input.classList.add('ql-' + format);
   if (value != null) {
     input.value = value;
